@@ -1,0 +1,380 @@
+:root {
+  --cream: #fff8f0;
+  --espresso: #3a241c;
+  --terracotta: #a14b2a;
+  --wheat: #e8c9a9;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--espresso);
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+a {
+  color: var(--terracotta);
+  text-underline-offset: 0.2em;
+}
+
+a:hover {
+  text-decoration-thickness: 0.14em;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--terracotta);
+  outline-offset: 3px;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 1000;
+  padding: 0.65rem 1rem;
+  background: var(--cream);
+  color: var(--espresso);
+}
+
+.skip-link:focus {
+  left: 0.75rem;
+  top: 0.75rem;
+}
+
+h1,
+h2,
+h3,
+.brand {
+  font-family: Georgia, serif;
+  line-height: 1.2;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: clamp(2rem, 8vw, 3.6rem);
+}
+
+h2 {
+  margin-top: 0;
+  font-size: clamp(1.5rem, 5vw, 2.2rem);
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+.site-header {
+  background: var(--espresso);
+  color: var(--cream);
+  padding: 1rem;
+}
+
+.brand {
+  margin: 0 0 0.8rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.brand a,
+.site-nav a {
+  color: var(--cream);
+  text-decoration: none;
+}
+
+.site-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.site-nav a {
+  display: block;
+  padding: 0.55rem 0.7rem;
+  border-radius: 0.35rem;
+}
+
+.site-nav a:hover,
+.site-nav a[aria-current="page"] {
+  background: var(--terracotta);
+}
+
+.site-main {
+  width: min(100% - 2rem, 70rem);
+  margin: 0 auto;
+  padding: 2rem 0 3rem;
+}
+
+.page-heading {
+  max-width: 48rem;
+  margin-bottom: 2rem;
+}
+
+.hero,
+.feature-section,
+.contact-layout,
+.card-row {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero,
+.feature-section {
+  gap: 1.5rem;
+  align-items: center;
+  padding: 1.25rem;
+  background: var(--wheat);
+  border-radius: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.hero-copy,
+.feature-copy {
+  flex: 1 1 0;
+}
+
+.hero-image,
+.wide-image,
+.feature-picture img,
+.signature-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0.6rem;
+}
+
+.hero-image {
+  flex: 1 1 0;
+  max-width: 32rem;
+}
+
+.feature-picture {
+  display: block;
+  flex: 1 1 0;
+  width: 100%;
+}
+
+.content-panel,
+.visit-panel,
+.product-group,
+.team-section,
+.signature-figure,
+.request-form,
+.contact-details {
+  margin: 0 0 1.5rem;
+  padding: 1.25rem;
+  border: 2px solid var(--wheat);
+  border-radius: 0.75rem;
+}
+
+.visit-panel {
+  background: var(--espresso);
+  color: var(--cream);
+}
+
+.visit-panel a {
+  color: var(--cream);
+}
+
+.wide-image {
+  max-height: 28rem;
+  object-fit: cover;
+  margin: 0 0 2rem;
+}
+
+.product-group,
+.team-section {
+  overflow: hidden;
+}
+
+.product-card,
+.team-card {
+  padding: 1rem;
+  background: var(--wheat);
+  border-radius: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.product-card:last-child,
+.team-card:last-child {
+  margin-bottom: 0;
+}
+
+.signature-figure {
+  background: var(--wheat);
+}
+
+.signature-figure figcaption {
+  padding-top: 0.75rem;
+  font-weight: 700;
+}
+
+.media-panel video,
+audio {
+  width: 100%;
+  max-width: 42rem;
+}
+
+.contact-layout {
+  gap: 1.5rem;
+}
+
+.request-form,
+.contact-details {
+  flex: 1 1 0;
+}
+
+fieldset {
+  margin: 0 0 1.25rem;
+  padding: 1rem;
+  border: 2px solid var(--wheat);
+  border-radius: 0.5rem;
+}
+
+legend,
+label {
+  font-weight: 700;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+textarea {
+  width: 100%;
+  margin-top: 0.35rem;
+  padding: 0.7rem;
+  border: 2px solid var(--espresso);
+  border-radius: 0.35rem;
+  background: var(--cream);
+  color: var(--espresso);
+  font: inherit;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  border: 0;
+  border-radius: 0.4rem;
+  padding: 0.8rem 1.25rem;
+  background: var(--terracotta);
+  color: var(--cream);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--espresso);
+}
+
+address {
+  font-style: normal;
+}
+
+.site-footer {
+  padding: 1.25rem 1rem;
+  background: var(--espresso);
+  color: var(--cream);
+  text-align: center;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+@media screen and (min-width: 48rem) {
+  .site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 1rem max(2rem, calc((100% - 70rem) / 2));
+  }
+
+  .brand {
+    margin: 0;
+  }
+
+  .site-nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .hero,
+  .feature-section,
+  .contact-layout {
+    flex-direction: row;
+  }
+
+  .hero,
+  .feature-section {
+    padding: 2rem;
+  }
+
+  .card-row {
+    flex-direction: row;
+    gap: 1rem;
+    align-items: stretch;
+  }
+
+  .team-card {
+    flex: 1 1 0;
+    margin-bottom: 0;
+  }
+
+  .product-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .product-group h2 {
+    flex-basis: 100%;
+  }
+
+  .product-card {
+    flex: 1 1 18rem;
+    margin-bottom: 0;
+  }
+
+  .request-form {
+    flex-basis: 66%;
+  }
+
+  .contact-details {
+    flex-basis: 34%;
+    align-self: flex-start;
+    background: var(--wheat);
+  }
+}
+
+@media screen and (min-width: 70rem) {
+  .site-main {
+    padding-top: 3rem;
+    padding-bottom: 4rem;
+  }
+
+  .content-panel,
+  .visit-panel,
+  .product-group,
+  .team-section,
+  .signature-figure,
+  .request-form,
+  .contact-details {
+    padding: 1.5rem;
+  }
+}
