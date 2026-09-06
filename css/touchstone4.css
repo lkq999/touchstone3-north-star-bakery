@@ -1,0 +1,143 @@
+/* Touchstone 4: JavaScript interaction, validation, and storage */
+.eyebrow {
+  margin: 0 0 0.25rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.favorites-panel,
+.storage-card {
+  margin: 0 0 2rem;
+  padding: 1.25rem;
+  border: 2px solid var(--terracotta);
+  border-radius: 0.75rem;
+  background: #fffdf9;
+}
+
+.favorites-panel h2,
+.storage-card h2 {
+  margin-bottom: 0.35rem;
+}
+
+.favorites-count,
+.storage-status {
+  margin-top: 0;
+  font-weight: 700;
+}
+
+.favorites-list {
+  margin: 0.75rem 0 1rem;
+  padding-left: 1.25rem;
+}
+
+.favorites-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.button-link {
+  display: inline-block;
+  padding: 0.72rem 1rem;
+  border-radius: 0.4rem;
+  background: var(--terracotta);
+  color: var(--cream);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.button-link:hover {
+  background: var(--espresso);
+}
+
+.secondary-button {
+  border: 2px solid var(--espresso);
+  background: var(--cream);
+  color: var(--espresso);
+}
+
+.secondary-button:hover {
+  background: var(--wheat);
+}
+
+.secondary-button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.favorite-button {
+  margin-top: auto;
+}
+
+.favorite-button.is-favorite {
+  background: var(--espresso);
+}
+
+.status-message {
+  min-height: 1.5rem;
+  margin-bottom: 0;
+  font-weight: 700;
+}
+
+.field-error {
+  display: block;
+  min-height: 1.35rem;
+  margin-top: 0.25rem;
+  color: #7a1f13;
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+input[aria-invalid="true"],
+textarea[aria-invalid="true"] {
+  border-color: #a12616;
+  background: #fff5f2;
+}
+
+.form-status {
+  margin: 1rem 0 0;
+  padding: 0.8rem 1rem;
+  border-radius: 0.45rem;
+}
+
+.form-status:empty {
+  display: none;
+}
+
+.error-summary {
+  border: 2px solid #a12616;
+  background: #fff5f2;
+  color: #71170c;
+}
+
+.success-summary {
+  border: 2px solid #35623d;
+  background: #f1f8f2;
+  color: #23492a;
+}
+
+.storage-card ul {
+  margin-top: 0.4rem;
+}
+
+@media screen and (min-width: 48rem) {
+  .favorites-panel {
+    display: grid;
+    grid-template-columns: minmax(13rem, 0.85fr) minmax(14rem, 1fr);
+    gap: 0.5rem 2rem;
+    align-items: start;
+  }
+
+  .favorites-panel .favorites-actions,
+  .favorites-panel .status-message {
+    grid-column: 1 / -1;
+  }
+
+  .product-card {
+    display: flex;
+    flex-direction: column;
+  }
+}
