@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>North Star Bakery | Products</title>
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/touchstone4.css">
+  <script src="js/app.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -20,9 +22,23 @@
 
   <main id="main-content" class="site-main">
     <header class="page-heading">
-    <h1>Bakery Menu</h1>
-    <p>Our selection changes with the season and the morning bake. Prices below are typical ranges; please contact us for current availability and custom requests. Online checkout is not required.</p>
+      <h1>Bakery Menu</h1>
+      <p>Our selection changes with the season and the morning bake. Save items you are interested in and we will remember your list in this browser for your next visit or pre-order request.</p>
     </header>
+
+    <section id="favorites-panel" class="favorites-panel" aria-labelledby="favorites-heading">
+      <div>
+        <p class="eyebrow">Your bakery short list</p>
+        <h2 id="favorites-heading">Saved favorites</h2>
+        <p id="favorites-count" class="favorites-count">0 saved favorites</p>
+      </div>
+      <ul id="favorites-list" class="favorites-list"></ul>
+      <div class="favorites-actions">
+        <a class="button-link" href="contact.html">Use favorites in a request</a>
+        <button type="button" id="clear-favorites" class="secondary-button" hidden>Clear favorites</button>
+      </div>
+      <p id="favorite-status" class="status-message" role="status" aria-live="polite"></p>
+    </section>
 
     <img class="wide-image" src="media/bakery-bread_c.svg" alt="Fresh artisan bread loaves from North Star Bakery">
 
@@ -32,11 +48,13 @@
         <h3>Country Sourdough</h3>
         <p>A naturally leavened loaf with a crisp crust and soft, open crumb.</p>
         <p>Typical price: $7-$10 per loaf</p>
+        <button type="button" class="favorite-button" data-favorite-id="country-sourdough" aria-pressed="false">Save as favorite</button>
       </article>
       <article class="product-card">
         <h3>Honey Oat</h3>
         <p>A soft sandwich loaf made with oats and a touch of local honey.</p>
         <p>Typical price: $6-$9 per loaf</p>
+        <button type="button" class="favorite-button" data-favorite-id="honey-oat" aria-pressed="false">Save as favorite</button>
       </article>
     </section>
 
@@ -46,11 +64,13 @@
         <h3>Butter Croissants</h3>
         <p>Classic laminated croissants with a crisp exterior and tender layers.</p>
         <p>Typical price: $4-$6 each</p>
+        <button type="button" class="favorite-button" data-favorite-id="butter-croissants" aria-pressed="false">Save as favorite</button>
       </article>
       <article class="product-card">
         <h3>Seasonal Fruit Danish</h3>
         <p>Flaky pastry with rotating fruit, lightly sweetened cream, and glaze.</p>
         <p>Typical price: $4-$7 each</p>
+        <button type="button" class="favorite-button" data-favorite-id="seasonal-fruit-danish" aria-pressed="false">Save as favorite</button>
       </article>
     </section>
 
@@ -60,6 +80,7 @@
         <h3>Celebration Cakes</h3>
         <p>Made-to-order layer cakes for birthdays, showers, and small gatherings.</p>
         <p>Typical price: $35-$85 depending on size and design</p>
+        <button type="button" class="favorite-button" data-favorite-id="celebration-cakes" aria-pressed="false">Save as favorite</button>
       </article>
     </section>
 
