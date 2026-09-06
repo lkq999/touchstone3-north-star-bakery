@@ -1,17 +1,15 @@
-# Touchstone 3 - North Star Bakery
+# Touchstone 4 - North Star Bakery
 
-This project builds on the North Star Bakery HTML structure and adds an external CSS design system and responsive layout for Sophia Learning's Introduction to Web Development Touchstone 3.
+This branch builds on the existing North Star Bakery HTML/CSS website and adds JavaScript interactivity for Sophia Learning's Introduction to Web Development Touchstone 4.
 
-## Design system
-- Cream: `#FFF8F0`
-- Espresso: `#3A241C`
-- Terracotta: `#A14B2A`
-- Wheat: `#E8C9A9`
-- Body font: Arial
-- Heading/brand font: Georgia
+## Interactive feature
+The Products page includes a favorites list. Visitors can save or remove bakery items, see the page update immediately, clear the list, and carry saved favorites into the Contact page.
 
-## Responsive behavior
-The base styles are mobile-first. At `48rem`, navigation changes from a vertical stack to a horizontal row, hero/feature/contact layouts move into side-by-side Flexbox arrangements, and cards share horizontal space. A second media query at `70rem` increases spacing on wide screens.
+## Validation
+The Contact form uses JavaScript to prevent invalid submission and displays field-level feedback for name length, email format, pickup date, request type, and item-detail length.
 
-## Media
-The media in this repository comes from the provided Sophia Learning `Bakery_c.zip` assets. Copies are web-optimized for practical repository hosting while preserving the supplied visual and audiovisual content.
+## Browser storage
+`localStorage` remembers two meaningful types of data: selected product favorites and a validated visitor name/email profile. Saved favorites persist across page loads and can be inserted into the pre-order details field; saved contact details are restored on a later visit.
+
+## Code structure
+Behavior is divided into small functions. Product information is managed in an array of product objects, while storage keys and validation messages are kept in separate objects.
